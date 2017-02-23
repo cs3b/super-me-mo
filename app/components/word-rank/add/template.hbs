@@ -1,0 +1,16 @@
+{{input value=wordRank.word}}
+
+{{input value=wordRank.translation}}
+
+<span {{action 'addWord'}}>add Word</span>
+
+
+<ul>
+  {{#each words as |word|}}
+    <li {{action 'editWord' word}}>
+      {{word.word}} - {{word.translation}}
+    </li>
+  {{/each}}
+</ul>
+
+{{yield}}
